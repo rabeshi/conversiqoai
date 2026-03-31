@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-background text-foreground antialiased;
+  background-image:
+    radial-gradient(circle at top left, rgba(91, 115, 247, 0.09), transparent 24%),
+    radial-gradient(circle at 85% 14%, rgba(148, 163, 184, 0.08), transparent 20%),
+    linear-gradient(180deg, #fbfcff 0%, #f5f7fb 100%);
+}
+
+* {
+  @apply border-border;
+}
+
+.container-shell {
+  @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+}
+
+.glass-panel {
+  @apply rounded-[32px] border border-white/80 bg-white/90 shadow-soft backdrop-blur;
+}
+
+.section-title {
+  @apply text-3xl font-semibold tracking-[-0.04em] text-slate-950 sm:text-5xl;
+}
+
+.section-copy {
+  @apply max-w-2xl text-base leading-7 text-slate-600 sm:text-lg;
+}
+
+.grid-dots {
+  background-image: radial-gradient(rgba(148, 163, 184, 0.25) 1px, transparent 1px);
+  background-size: 18px 18px;
+}
+
+.hero-orbit {
+  background:
+    radial-gradient(circle at 15% 20%, rgba(91, 115, 247, 0.18), transparent 20%),
+    radial-gradient(circle at 85% 10%, rgba(148, 163, 184, 0.16), transparent 18%),
+    linear-gradient(135deg, rgba(15, 23, 42, 1) 0%, rgba(10, 18, 42, 0.98) 55%, rgba(36, 56, 128, 0.95) 100%);
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
